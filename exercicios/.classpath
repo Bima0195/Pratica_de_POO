@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-23">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="product"/>
+	<classpathentry kind="src" path="notaAluno"/>
+	<classpathentry kind="src" path="retanguloArea"/>
+	<classpathentry kind="src" path="salarioFuncionario"/>
+	<classpathentry kind="src" path="circulo"/>
+	<classpathentry kind="src" path="dolar"/>
+	<classpathentry kind="src" path="Produto2"/>
+	<classpathentry kind="src" path="banco"/>
+	<classpathentry kind="src" path="bancoCorrecaoProfe"/>
+	<classpathentry kind="src" path="secao10ComportamentoMemóriaArraysListas"/>
+	<classpathentry kind="src" path="secao10Vetor"/>
+	<classpathentry kind="src" path="secao10VetorProtudo"/>
+	<classpathentry kind="src" path="secao10ListadeExercicios"/>
+	<classpathentry kind="src" path="forEach"/>
+	<classpathentry kind="src" path="secao10List"/>
+	<classpathentry kind="src" path="secao10POOMatriz"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
