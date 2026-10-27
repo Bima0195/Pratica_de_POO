@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PersonDAO.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">exercicio2</a> &gt; <a href="index.source.html" class="el_package">exercicio2</a> &gt; <span class="el_source">PersonDAO.java</span></div><h1>PersonDAO.java</h1><pre class="source lang-java linenums">package exercicio2;
+
+import java.util.ArrayList;
+import java.util.List;
+
+<span class="fc" id="L6">public class PersonDAO {</span>
+    public List&lt;String&gt; isValidToInclude(Person person) {
+<span class="fc" id="L8">        List&lt;String&gt; erros = new ArrayList&lt;&gt;();</span>
+
+<span class="fc bfc" id="L10" title="All 2 branches covered.">        if (person == null) {</span>
+<span class="fc" id="L11">            erros.add(&quot;Pessoa obrigatoria.&quot;);</span>
+<span class="fc" id="L12">            return erros;</span>
+        }
+<span class="fc bfc" id="L14" title="All 2 branches covered.">        if (person.getNome() == null ||</span>
+<span class="fc bfc" id="L15" title="All 2 branches covered.">                !person.getNome().trim().matches(&quot;\\p{L}+(\\s+\\p{L}+)+&quot;)) {</span>
+<span class="fc" id="L16">            erros.add(&quot;Nome deve ter pelo menos duas partes, somente com letras.&quot;);</span>
+        }
+<span class="fc bfc" id="L18" title="All 4 branches covered.">        if (person.getIdade() &lt; 1 || person.getIdade() &gt; 200) {</span>
+<span class="fc" id="L19">            erros.add(&quot;Idade deve estar entre 1 e 200.&quot;);</span>
+        }
+<span class="fc bfc" id="L21" title="All 2 branches covered.">        if (person.getEmails().isEmpty()) {</span>
+<span class="fc" id="L22">            erros.add(&quot;Informe pelo menos um email.&quot;);</span>
+        }
+<span class="fc bfc" id="L24" title="All 2 branches covered.">        for (Email email : person.getEmails()) {</span>
+<span class="fc bfc" id="L25" title="All 4 branches covered.">            if (email == null || email.getNome() == null ||</span>
+<span class="fc bfc" id="L26" title="All 2 branches covered.">                    !email.getNome().matches(&quot;[^@\\s.]+(?:\\.[^@\\s.]+)*@[^@\\s.]+(?:\\.[^@\\s.]+)+&quot;)) {</span>
+<span class="fc" id="L27">                erros.add(&quot;Email invalido.&quot;);</span>
+            }
+<span class="fc" id="L29">        }</span>
+<span class="fc" id="L30">        return erros;</span>
+    }
+}
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>
